@@ -1,4 +1,4 @@
-FROM node:18-alpine as installer
+FROM node:18-alpine AS installer
 
 WORKDIR /app 
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN yarn run build
 
-FROM nginx:latest as deployer
+FROM python3 AS deployer
 COPY --from=installer /app/build /usr/share/nginx/html
 
 
