@@ -11,6 +11,6 @@ COPY . .
 #RUN yarn run build
 
 FROM nginx:latest AS deployer
-COPY --from=installer /app/src /usr/share/nginx/html
+COPY --from=installer /app/spec /usr/share/nginx/html
 
 
