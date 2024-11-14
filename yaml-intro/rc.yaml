@@ -11,7 +11,8 @@ spec:
             labels:
                 env: "dev"
         spec:
-            - name: "intro-rc-pod-container"
-              image: "nginx"
-              ports:
-                  - containerPort: 80
+            containers:
+                - name: "intro-rc-pod-container"
+                  image: "nginx"
+                  ports:
+                    - containerPort: 80
