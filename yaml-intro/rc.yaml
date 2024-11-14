@@ -9,7 +9,7 @@ spec:
         metadata:
             name: "intro-rc-pod"
             labels:
-                env: "dev"
+                env: "dev-rc"
         spec:
             containers:
                 - name: "intro-rc-pod-container"
