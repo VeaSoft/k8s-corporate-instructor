@@ -1,10 +1,10 @@
-apiVersion: v1 
-kind: ReplicationController 
-metadata: 
+apiVersion: v1
+kind: ReplicationController
+metadata:
   name: "syncer-test-two"
   labels:
-    env: white 
-spec: 
+    env: white
+spec:
   template:
     metadata:
       name: "syncer-randomer"
@@ -13,6 +13,7 @@ spec:
     spec:
       containers:
         - name: "syncer-two"
-          image: nginx 
-          containerPort: 80
+          image: nginx
+          ports:
+            - containerPort: 80
   replicas: 2
