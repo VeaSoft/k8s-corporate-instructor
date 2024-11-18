@@ -9,7 +9,7 @@ spec:
     metadata:
       name: "syncer-randomer"
       labels:
-        star-level: "amazing"
+        star-level: amazing
     spec:
       containers:
         - name: "syncer-two"
