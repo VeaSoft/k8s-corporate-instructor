@@ -1,0 +1,19 @@
+apiVersion: v1 
+kind: ReplicationController 
+metadata: 
+  name: 'sync-test-one'
+  labels:
+    env: demo 
+spec:
+  template:
+    metadata:
+      name: 'sync-test-one-oracle'
+      labels:
+        star-level: amazing
+    spec:
+      containers:
+        - name: syncer-one
+          image: nginx 
+          ports:
+            - containerPort: 80
+  replicas: 5
