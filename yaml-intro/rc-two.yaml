@@ -10,8 +10,9 @@ spec:
       name: "syncer-randomer"
       labels:
         star-level: "amazing"
-    containers:
-      - name: "syncer-two"
-        image: nginx 
-        containerPort: 80
+    spec:
+      containers:
+        - name: "syncer-two"
+          image: nginx 
+          containerPort: 80
   replicas: 2
